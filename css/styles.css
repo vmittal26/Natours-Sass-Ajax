@@ -23,42 +23,36 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   position: relative; }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.logo {
-  height: 5rem; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: 1rem;
+    animation: moveInRight 1s ease-out; }
 
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation: moveInLeft 1s ease-out; }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 3rem;
-  font-weight: 100;
-  letter-spacing: 1rem;
-  animation: moveInRight 1s ease-out; }
-
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -69,21 +63,26 @@ body {
   position: relative;
   font-size: 1.6rem; }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
 .btn--white {
   margin-top: 5%;
   background-color: #fff; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn--animated {
   animation: moveInUp 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn::after {
   content: "";
@@ -96,13 +95,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 @keyframes moveInLeft {
   0% {
