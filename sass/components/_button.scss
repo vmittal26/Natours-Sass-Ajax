@@ -5,15 +5,22 @@
         text-decoration: none;
         padding: 1.5rem 4rem;
         display: inline-block;
-        color: $color-grey-dark;
         border-radius: 10rem;
         transition: all 0.2s;
         position: relative;
         font-size: 1.6rem;
     }
     &--white {
+        color: $color-grey-dark;
         margin-top: 5%;
         background-color: $color-white;
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    &--green {
+        color: $color-white;
+        background-color: $color-primary;
         &::after {
             background-color: $color-white;
         }
@@ -22,7 +29,6 @@
         animation: moveInUp 0.5s ease-out 0.75s;
         animation-fill-mode: backwards;
     }
-   
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -31,12 +37,10 @@
             opacity: 0;
         }
     }
-
     &:active {
         transform: translateY(-1px);
         box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
-
     &::after {
         content: "";
         display: inline-block;
@@ -49,34 +53,31 @@
         z-index: -1;
         transition: all 0.4s;
     }
-
 }
 
-.btn-text{
-
+.btn-text {
     &:link,
-    &:visited{
+    &:visited {
         font-size: $default-font-size;
-        color:$color-primary;
-        display:inline-block;
+        color: $color-primary;
+        display: inline-block;
         text-decoration: none;
         border-bottom: 1px solid $color-primary;
-        padding:0.9rem;
+        padding: 0.9rem;
         transition: all 0.2s;
-
     }
-    &:hover{
-        background-color: darken($color-primary,10%);
-        color:$color-white;
-        padding:0.9rem;
+    &:hover {
+        background-color: darken($color-primary, 10%);
+        color: $color-white;
+        padding: 0.9rem;
         transform: translateY(-2px);
-        box-shadow: 0.5rem 1rem 1rem rgba($color-black,0.2);
+        box-shadow: 0.5rem 1rem 1rem rgba($color-black, 0.2);
     }
-    &:active{
-        background-color: darken($color-primary,10%);
-        color:$color-white;
-        padding:0.9rem;
+    &:active {
+        background-color: darken($color-primary, 10%);
+        color: $color-white;
+        padding: 0.9rem;
         transform: translateY(-1px);
-        box-shadow: 0rem 0.5rem 1rem rgba($color-black,0.2);
+        box-shadow: 0rem 0.5rem 1rem rgba($color-black, 0.2);
     }
 }

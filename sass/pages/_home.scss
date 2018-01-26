@@ -10,16 +10,18 @@
     background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/nat-4.jpg);
     background-size: cover;
     background-position: top;
-    transform:skewY(-7deg);
-
-    & > * {
-        transform:skewY(7deg);
+    transform: skewY(-7deg);
+    &>* {
+        transform: skewY(7deg);
     }
 }
 
 .section-tours {
     margin-top: -20vh;
     background-color: $gray-color-1;
-    padding: 25rem 0;
-   
+    padding: 15rem 0;
+}
+.section-stories{
+    position:relative;
+    padding:10rem 0;
 }
