@@ -48,5 +48,8 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
+        @include respond(phone){
+            width:100%
+        }
     }
 }
