@@ -3,7 +3,7 @@
     margin: 0 auto;
     &:not(:last-child) {
         margin-bottom: $grid-space-vertical;
-        @include respond(phone) {
+        @include respond(tab-land) {
             margin-bottom:$grid-space-vertical-small;
         }
     }
@@ -12,17 +12,25 @@
         float: left;
         &:not(:last-child) {
             margin-right: $grid-space-horizontal;
-            @include respond(phone) {
+            @include respond(tab-land) {
                 margin-right: 0px;
                 margin-bottom:$grid-space-vertical-small;
             }
         }
-        @include respond(phone) {
+        @include respond(tab-land) {
             width: 100% !important;
         }
     }
+    @include respond(tab-land) {
+        max-width: 100rem;
+        padding:0 6.5rem;
+    }
+    @include respond(tab-port) {
+        max-width: 70rem;
+    }
+
     @include respond(phone) {
-        max-width: 50rem;
+        max-width:60rem;
     }
     .col-1-2 {
         width:calc((100% - #{$grid-space-horizontal})/2);
