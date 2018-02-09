@@ -15,7 +15,7 @@
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
         <label for="navi-toggle" class="navigation__button">
             <span class="navigation__icon">
-                 &nbsp;
+                &nbsp;
             </span>
         </label>
         <div class="navigation__background">&nbsp;</div>
@@ -162,7 +162,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
 
                         </div>
@@ -194,7 +194,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$497</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
 
                         </div>
@@ -226,7 +226,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$897</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
 
                         </div>
@@ -317,7 +317,7 @@
                                         <span class="form__radio-button"></span>
                                         Large Tour Group</label>
                                 </div>
-                                    <button class="btn btn--green">Next step &rarr;</button>
+                                <button class="btn btn--green">Next step &rarr;</button>
                             </div>
                         </form>
                     </div>
@@ -327,8 +327,12 @@
     </main>
 
     <footer class="footer">
+
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width:37.5em)">
+                <img alt="Full Logo" srcset="img/logo-green-1x.png 1x ,img/logo-green-2x.png 2x">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-2">
@@ -364,7 +368,23 @@
             </div>
         </div>
     </footer>
-
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-8.jpg" class = "popup__img" alt="Tour Photo" srcset="">
+                <img src="img/nat-9.jpg" class = "popup__img" alt="Tour Photo" srcset="">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-mr-bottom-medium">Start Booking Now</h2>
+                <h3 class="heading-tertiary u-mr-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                <div class="popup__text">
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dicta quia quos laboriosam, repellat dolores sit vel soluta maxime eveniet rem quaerat dolore! Fugiat voluptate maxime ullam provident corrupti esse, accusantium vel veniam cupiditate, consectetur dolores doloribus quasi pariatur blanditiis corporis dicta nesciunt, beatae iure ea consequatur modi quo quas? Fugiat ipsam consectetur beatae autem reprehenderit et praesentium nihil, facere adipisci obcaecati dolorum sint vitae similique cumque dolores quisquam optio incidunt vel maiores ratione atque provident! Possimus tempora impedit nobis?
+                </div>
+                <a href="#" class = "btn btn--green">Book Now</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
